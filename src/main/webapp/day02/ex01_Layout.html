@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>레이아웃</title>
+<style type="text/css">
+	/*       css 초기화 작업        */	
+	*{margin: 0px; padding: 0px;} /* *(전체영역) margin, padding을 0으로 주면 초기화 */
+	ul li{list-style-type: none;}
+	a{text-decoration: none;} 
+	/*                          */
+	 article{
+		border: 1px solid red;
+	}
+	ul li{
+		border: 1px solid blue;
+	} 
+	
+	.wrap{
+		width: 400px;
+		height: 400px;
+		float: left;
+		background-color: #f1f1f1;
+		}
+	.wrap .left{
+		width: 50%; 
+		height: 400px; 
+		background-color: pink;
+		float: left;
+		}
+ 	.wrap .right{
+ 		width: 50%; 
+ 		height: 400px; 
+ 		background-color: lightblue;
+ 		float: left;
+ 		}  
+ 	/* 가상요소 :  float 해제 할때 사용 : 선택한 요소의 끝부분에 생성된 콘텐츠를 추가한다.  */
+ 	.wrap::after{/* after : 없는 놈을 있는놈 처럼 만든다. */
+ 		content: '';/* 빈공간으로 설정 */
+ 		display: block; /* 공간 블럭 */
+ 		clear: both; /* float 해제하는 놈 */
+ 	}
+	
+	#header{
+		background-color: lightgray;
+		padding: 30px;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+	}
+	
+	#footer{background-color: lightgray;
+		padding: 10px;
+		text-align: center;
+		font-size: 20px;
+		color: white;
+	}
+		
+ 	
+</style>
+</head>
+<body>
+	<article>
+		<ul>
+			<li>list</li>
+			<li>list</li>
+		</ul>
+		<a href="#">link</a> 
+	</article>
+	<hr>
+	
+<!-- Float 를 이용한 블록요소 좌우 배치 -->
+<div class="wrap">
+	<section class="left"></section>
+	<section class="right"></section>
+	<!-- 가상요소가 여기에 있다고 가정 -->
+</div>
+
+</body>
+</html>

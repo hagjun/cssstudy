@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>레이아웃</title>
+<style type="text/css">
+	.wrap{
+		margin: 0px auto;
+		}
+	.wrap .left{
+		width: 30%; 
+		height: 400px; 
+		background-color: pink;
+		float: left;
+		}
+ 	.wrap .right{
+ 		width: 70%; 
+ 		height: 400px; 
+ 		background-color: lightblue;
+ 		float: left;
+ 		}  
+ 	/* 가상요소 :  float 해제 할때 사용 : 선택한 요소의 끝부분에 생성된 콘텐츠를 추가한다.  */
+ 	.wrap::after{/* after : 없는 놈을 있는놈 처럼 만든다. */
+ 		content: '';/* 빈공간으로 설정 */
+ 		display: block; /* 공간 블럭 */
+ 		clear: both; /* float 해제하는 놈 */
+ 	}
+	
+	#header{
+		background-color: lightgray;
+		padding: 30px;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+	}
+	
+	#footer{background-color: lightgray;
+		padding: 10px;
+		text-align: center;
+		color: white;
+	}
+
+	/* #nav {
+		list-style-type: none;
+		background-color: #777777;
+		overflow: hidden;
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	#nav ul{
+		margin: 0px;
+		padding: 0px;
+		list-style-type: none;
+		display: inline-block;
+	}
+
+	#nav ul li{
+		color: white;
+		padding: 50px;  띄어쓰기 
+		float: left;
+	} 	
+	*/
+	
+</style>
+</head>
+<body>
+	<div id="header">
+		<h1>헤더부분</h1>
+	</div>
+	
+	<!-- <div id="nav">
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+		</ul>
+	</div> -->
+<!-- Float 를 이용한 블록요소 좌우 배치 -->
+<div class="wrap">
+	<section class="left"></section>
+	<section class="right"></section>
+	<!-- 가상요소가 여기에 있다고 가정 -->
+</div>
+
+<div id="footer">
+		<p>푸터</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex05_position</title>
+<style type="text/css">
+	section{
+		width: 600px; 
+		height: 200px;
+	}
+	section:nth-of-type(1) {
+		background-color: pink;
+	}
+	/* static 속성(기본값) 		
+	section:nth-of-type(2) {
+		background-color: lightblue;
+		
+	}
+	*/
+	
+	section:nth-of-type(2) {
+		background-color: lightblue;
+		position: relative;
+		top: -100px;
+		left: 100px;	
+	}
+	section:nth-of-type(3) {
+		background-color: yellow;
+	}
+</style>
+</head>
+<body>
+<!-- 
+	position : 위치 지정 하는 속성 
+	- static : 기본값, 문서의 흐름에 거슬리지 않음, 다른 요소와 겹치지 않게
+	           top, bottom, left, right 속성에 영향을 받지 않는다.
+	- relative : 원래 위치값에서 top, bottom, left, right 을 가지고 이동(현재문서에 영향을 줌), 아래 요소는 원래 흐름에 거슬리자 않음.
+	- absolute : 일반적인 문서흐름을 제거하고, 부모 position 기준으로 상대적으로 위치를 지정
+	             만약에 부모의 position 이 없으면 body 를 기준으로 함 (절대 위치 좌표 설정이 됨)
+	- fixed : 일반적인 문서 흐름을 제거하고, 지정한 위치 고정 (절대 좌표)
+	- sticky : 일반적인 문서 흐름을 제거하고, 스크롤 동작이 존재하는 가장 가까운 요소에 위치 지정
+-->
+<section></section>
+<section></section>
+<p>한국 ICT 인재개발원</p>
+<section></section>
+</body>
+</html>
