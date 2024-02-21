@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		margin: 0px auto;
+		padding: 0px;
+	}
+	.wrap{
+		margin: 0px auto;
+	}
+	
+	.wrap::after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+	
+	
+	.left{
+		box-sizing: border-box;
+		width: 250px;
+		height: 600px;
+		text-align: center;
+		float: left;
+		line-height: 600px;
+		background-color: lightblue;
+		
+		
+	}
+	.center{
+		box-sizing: border-box;
+		width: 800px;
+		height: 600px;
+		text-align: center;
+		float: left;
+		background-color: white;
+		line-height: 600px;
+	}
+	.right{
+		box-sizing: border-box;
+		width: 150px;
+		height: 600px;
+		text-align: center;
+		float: left;
+		line-height: 600px;
+		background-color: lightblue;
+	}
+	
+	#header{
+		width: 1200px;;
+		height: 120px;
+		padding: 20px;
+		font-size: 20px;
+		background-color: #f1f1f1;
+		text-align: center; 
+		
+	}
+	
+	
+	
+	#footer{
+		line-height: 120px;
+		width: 1200px;;
+		height: 100px;
+		text-align: center;
+		background-color: #f1f1f1;
+		font-size: 20px;
+		box-sizing: border-box; 
+	}
+</style>
+</head>
+<body>
+	<div id="header">
+	<h1>헤더</h1>
+
+</div>
+<div class="wrap">
+	<section class="left">사이드바</section>
+	<section class="center">본문</section>
+	<section class="right">사이드바</section>
+</div>
+<div id="footer"><h3>푸터</h3></div>
+
+</body>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		box-sizing: border-box;
+	}
+	.left{
+		background-color: #2196F3;
+		padding: 20px;
+		float: left;
+		width: 20%; /* 너비는 기본적으로 20% */
+	}
+	
+	.main{
+		background-color: #f1f1f1;
+		padding: 20px;
+		float: left;
+		width: 60%; /* 너비는 기본적으로 60% */
+	}
+	
+	.right{
+		background-color: #04AA6D;
+		padding: 20px;
+		float: left;
+		width: 20%; /* 너비는 기본적으로 20% */
+	}
+	/* 미디어 쿼리를 사용하여 800px에 중단점을 추가한다. 
+		800이하로 내려가면 밑으로 떨어진다. */
+	@media screen and (max-width: 800px){
+		.left, .main, .right{/* 뷰 포트가 800px 이하인 경우 너비는 100%이다. */
+			width: 100%;
+		}
+	}
+	
+</style>
+</head>
+<body>
+
+<h2>Media Queries</h2>
+<p>Resize the browser window.</p>
+
+<p>Make sure you reach the breakpoint at 800px when
+resizing this frame.</p>
+
+<div class="left">
+	<p>Left Menu</p>
+</div>
+<div class="main">
+	<p>Main Content</p>
+</div>
+<div class="right">
+	<p>Right Content</p>
+</div>
+</body>
+</html>
