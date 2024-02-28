@@ -8,7 +8,7 @@
 		width: 960px;
 		margin: 0 auto; /* 가운데 정렬 */
 	}
-	/* 수평 메뉴  */
+	/* 수평 메뉴 하는 방법 */
 	.navi{
 		width: 960px;
 		height: 60px;
@@ -21,16 +21,19 @@
 	}
 	
 	.navi ul li{
-		display: inline-block; /* 옆으로 펼치기 너비와 높이 줄수 있음 */
+		/* 옆으로 펼치기 너비와 높이 줄수 있음 */
+		display: inline-block; 
 		width: 150px;
 		padding: 10px;
 	}
+	/* 해당 링크를 눌렀을때  */
 	.navi a:link, .navi a:visited {
 		text-decoration: none; /* 밑줄 없애기 */
 		font-size: 14px;
 		padding: 10px;
 	}
-	.navi a:hover{
+	/* hover => 마우스 올렸을때에 이벤트 */
+	.navi a:hover {
 		background-color: black;
 		color: white;
 	}
